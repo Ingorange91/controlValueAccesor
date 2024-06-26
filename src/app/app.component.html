@@ -6,8 +6,13 @@
 		<span class="error" *ngIf="frmCalificar.controls.title.hasError('required')">Ingrese el titulo</span>
 
 		<label>Calificación</label>
-		<app-star-rating formControlName="rating"></app-star-rating>
+		<!-- <app-star-rating formControlName="rating"></app-star-rating> -->
+		<app-start-rating formControlName="rating"/>
 		<span class="error" *ngIf="frmCalificar.controls.rating.hasError('min')">La calificación mínima es 2</span>
+		
+		<app-rating-name formControlName="ratingName"/>
+		
+		
 		<button type="button" (click)="clickSave()">Save</button>
 	</form>
 </div>

@@ -1,0 +1,10 @@
+<form [formGroup]="frmName">
+    <label>Nombre</label>
+    <div class="container__elements">
+        <input type="text" class="field" formControlName="name" />
+        @if(frmName.controls.name.hasError('required')){
+            <span class="error">Este campo es obligatorio</span>
+        }
+        <app-start-rating formControlName="rating"/>
+    </div>
+</form>
